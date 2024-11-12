@@ -1,0 +1,7 @@
+export type FileStrucProps = {
+    content: string;
+}
+
+export interface StrucProps{
+    title: string
+}
