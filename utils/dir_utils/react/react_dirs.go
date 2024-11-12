@@ -32,11 +32,7 @@ func CreateReactStructure() {
 
 	dir_utils.CreateDirectories(directories)
 
-	fileMap := map[string]string{
-		"C:/Users/Matheus/Documents/Projetos/BackEnd/Golang/filestruc/content/vite/types.txt": "src/types/global-types.tsx",
-	}
-
-	fileutils.FilesFromMap(fileMap, "tsx")
+	fileutils.CreateFile("src/types/global-types.tsx", "tsx")
 
 	time.Sleep(2 * time.Second)
 	fmt.Println("React folder structure created!")

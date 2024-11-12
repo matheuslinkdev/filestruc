@@ -22,11 +22,7 @@ func CreateGoStructure() {
 
 	dir_utils.CreateDirectories(directories)
 
-	fileMap := map[string]string{
-		"C:/Users/Matheus/Documents/Projetos/BackEnd/Golang/filestruc/content/golang/main.txt": "cmd/main/main.go",
-	}
-
-	fileutils.FilesFromMap(fileMap, "go")
+	fileutils.CreateFile("cmd/main/main.go", "go")
 
 	fmt.Println("Golang folder structure created!")
 }

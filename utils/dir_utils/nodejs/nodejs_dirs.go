@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/matheuslinkdev/filestruc/utils/dir_utils"
+	fileutils "github.com/matheuslinkdev/filestruc/utils/file_utils"
 )
 
 func CreateNodeStructure() {
@@ -24,6 +25,8 @@ func CreateNodeStructure() {
 	}
 
 	dir_utils.CreateDirectories(directories)
+
+	fileutils.CreateFile("src/index.js", "js")
 
 	fmt.Println("Node js folder structure created!")
 }
