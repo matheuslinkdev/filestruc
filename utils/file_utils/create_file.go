@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 )
 
-func CreateFile(path, ext, content string) {
+func CreateFile(path, ext string) {
 	filePath := filepath.Join(path)
 	file, err := os.Create(filePath)
 	if err != nil {
@@ -14,12 +14,6 @@ func CreateFile(path, ext, content string) {
 		return
 	}
 	defer file.Close()
-
-	_, err = file.WriteString(content)
-	if err != nil {
-		fmt.Printf("Error writing on file %s: %v\n", filePath, err)
-		return
-	}
 
 	fmt.Printf("Created file: %s\n", filePath)
 }
